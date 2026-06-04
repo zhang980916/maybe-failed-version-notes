@@ -1,8 +1,12 @@
 # OpenClaw A-Share Research Lab
 
+[中文说明](README.zh-CN.md)
+
 Private-safe, local-first scaffolding for an OpenClaw-powered A-share quant research workflow.
 
 This repository is a sanitized extraction from a larger local research workspace. It keeps the reusable architecture and removes private data, live positions, local machine paths, messaging credentials, trading outputs, and production strategy files.
+
+![Dashboard preview](docs/assets/dashboard-preview.png)
 
 ## What Is Included
 
@@ -35,6 +39,14 @@ Open the dashboard after building demo data:
 ```powershell
 start dashboard\index.html
 ```
+
+For the most reliable local preview, serve the repository over HTTP first:
+
+```powershell
+python -m http.server 8123
+```
+
+Then open `http://127.0.0.1:8123/dashboard/`.
 
 ## CLI Examples
 
