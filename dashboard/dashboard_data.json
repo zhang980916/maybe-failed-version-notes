@@ -1,0 +1,92 @@
+{
+  "schema": "signal_dashboard.v1",
+  "generated_at": "2026-06-04T04:45:16+00:00",
+  "mode": "mock",
+  "summary": {
+    "active_factor_count": 7,
+    "factor_categories": {
+      "liquidity": 1,
+      "momentum": 2,
+      "reversal": 1,
+      "risk": 1,
+      "sentiment": 1,
+      "valuation": 1
+    },
+    "experiment_count": 2,
+    "top_candidate_count": 5
+  },
+  "top5": [
+    {
+      "rank": 1,
+      "code": "MOCK001",
+      "name": "North Star Materials",
+      "industry": "Materials",
+      "score": 0.84,
+      "weight": 0.22,
+      "risk_level": "low"
+    },
+    {
+      "rank": 2,
+      "code": "MOCK002",
+      "name": "River Cloud Energy",
+      "industry": "Energy",
+      "score": 0.79,
+      "weight": 0.2,
+      "risk_level": "medium"
+    },
+    {
+      "rank": 3,
+      "code": "MOCK003",
+      "name": "Jade Circuit",
+      "industry": "Electronics",
+      "score": 0.75,
+      "weight": 0.19,
+      "risk_level": "medium"
+    },
+    {
+      "rank": 4,
+      "code": "MOCK004",
+      "name": "Harbor Transit",
+      "industry": "Transport",
+      "score": 0.71,
+      "weight": 0.18,
+      "risk_level": "low"
+    },
+    {
+      "rank": 5,
+      "code": "MOCK005",
+      "name": "Clear Spring Pharma",
+      "industry": "Healthcare",
+      "score": 0.68,
+      "weight": 0.16,
+      "risk_level": "watch"
+    }
+  ],
+  "recent_experiments": [
+    {
+      "schema": "experiment_record.v1",
+      "experiment_id": "EXP-MOCK-001",
+      "recorded_at": "2026-01-01T00:00:00+00:00",
+      "type": "backtest",
+      "name": "mock top5 baseline",
+      "status": "success",
+      "metrics": {
+        "mean_ic": 0.029,
+        "turnover": 0.47
+      }
+    },
+    {
+      "schema": "experiment_record.v1",
+      "experiment_id": "EXP-MOCK-002",
+      "recorded_at": "2026-01-02T00:00:00+00:00",
+      "type": "walk_forward_cv",
+      "name": "mock low turnover blend",
+      "status": "success",
+      "metrics": {
+        "mean_ic": 0.034,
+        "turnover": 0.39
+      }
+    }
+  ],
+  "disclaimer": "Synthetic demo data only. Not investment advice."
+}

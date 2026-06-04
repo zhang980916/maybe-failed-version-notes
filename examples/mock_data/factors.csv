@@ -1,0 +1,9 @@
+factor_id,name,category,definition,window_days,status,source,last_ic_20d
+F001,momentum_20d,momentum,20 day return momentum,20,active,mock,0.041
+F002,reversal_5d,reversal,Short horizon reversal signal,5,active,mock,0.032
+F003,turnover_stability,liquidity,Inverse turnover volatility,20,active,mock,0.027
+F004,volatility_20d,risk,Annualized 20 day volatility,20,active,mock,-0.018
+F005,value_ep,valuation,Earnings yield proxy,1,active,mock,0.024
+F006,industry_relative_strength,momentum,Industry neutral relative strength,20,active,mock,0.036
+F007,sentiment_warmth,sentiment,Mock news sentiment score,3,active,mock,0.021
+F008,margin_pressure,risk,Mock financing pressure proxy,5,deprecated,mock,-0.012

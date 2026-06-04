@@ -1,0 +1,49 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Local secrets and machine state
+.env
+.env.*
+credentials/
+cookies*
+*.cookie
+*.token
+*.key
+*.pem
+
+# Local/private research data
+data/
+output/
+outputs/
+artifacts/
+logs/
+memory/
+state/
+positions.json
+picks_today.json
+*_candidates.json
+*_execution_filter_result.json
+*_history.jsonl
+
+# Heavy market/model files
+*.parquet
+*.db
+*.sqlite
+*.sqlite3
+*.pkl
+*.joblib
+*.model
+*.txt.model
+*.xlsx
+*.xls
+*.zip
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

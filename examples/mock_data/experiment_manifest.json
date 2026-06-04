@@ -1,0 +1,16 @@
+{
+  "type": "walk_forward_cv",
+  "name": "mock factor blend smoke test",
+  "script": "examples/mock_pipeline.py",
+  "status": "success",
+  "config": {
+    "universe": "synthetic_a_share_demo",
+    "folds": 3,
+    "top_k": 5
+  },
+  "metrics": {
+    "mean_ic": 0.034,
+    "worst_fold_ic": 0.012,
+    "turnover": 0.41
+  }
+}

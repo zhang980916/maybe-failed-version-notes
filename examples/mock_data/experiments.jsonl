@@ -1,0 +1,2 @@
+{"schema":"experiment_record.v1","experiment_id":"EXP-MOCK-001","recorded_at":"2026-01-01T00:00:00+00:00","type":"backtest","name":"mock top5 baseline","status":"success","metrics":{"mean_ic":0.029,"turnover":0.47}}
+{"schema":"experiment_record.v1","experiment_id":"EXP-MOCK-002","recorded_at":"2026-01-02T00:00:00+00:00","type":"walk_forward_cv","name":"mock low turnover blend","status":"success","metrics":{"mean_ic":0.034,"turnover":0.39}}
