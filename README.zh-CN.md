@@ -11,6 +11,7 @@
 - 记录因子元数据：名称、类别、窗口、定义、状态和最近 IC。
 - 记录研究实验：回测、walk-forward CV、参数和关键指标。
 - 评估因子组合：用一个透明的 mock 评分器演示组合排序流程。
+- 运行教育版选股因子模型：用公开权重演示“因子标准化 -> 加权打分 -> Top N 排名”。
 - 生成看板数据：把 mock 候选、实验记录和因子注册表合成一个 dashboard JSON。
 - 展示研究结果：静态只读 dashboard，不连接券商，不下单。
 
@@ -20,6 +21,7 @@
 src/openclaw_a_share_research_lab/
   registry.py          # 因子注册和实验记录
   gladiator.py         # 因子组合评估
+  educational_model.py # 教育版因子打分模型
   dashboard_bridge.py  # dashboard 数据桥
 dashboard/
   index.html           # 静态只读展示页
@@ -79,6 +81,23 @@ python -m openclaw_a_share_research_lab.registry log-experiment --manifest examp
 
 ```powershell
 python -m openclaw_a_share_research_lab.gladiator --factors examples\mock_data\factors.csv --out data\gladiator_rankings.json
+```
+
+运行教育版因子模型：
+
+```powershell
+python -m openclaw_a_share_research_lab.educational_model --input examples\mock_data\feature_matrix.csv --out data\educational_model_top5.json
+```
+
+教育版模型使用公开、简单、可自行修改的权重：
+
+```text
+score =
+  0.30 * momentum_20d
++ 0.20 * reversal_5d
++ 0.20 * value_ep
++ 0.15 * turnover_stability
+- 0.15 * volatility_20d
 ```
 
 生成 dashboard 数据：

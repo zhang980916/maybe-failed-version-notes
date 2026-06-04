@@ -41,6 +41,14 @@ def main() -> None:
     ])
     run([
         "-m",
+        "openclaw_a_share_research_lab.educational_model",
+        "--input",
+        "examples/mock_data/feature_matrix.csv",
+        "--out",
+        "data/educational_model_top5.json",
+    ])
+    run([
+        "-m",
         "openclaw_a_share_research_lab.dashboard_bridge",
         "--mock-dir",
         "examples/mock_data",

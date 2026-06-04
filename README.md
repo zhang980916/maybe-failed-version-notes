@@ -13,6 +13,7 @@ This repository is a sanitized extraction from a larger local research workspace
 - `registry`: factor metadata, experiment records, and research run manifests.
 - `gladiator`: a small factor-combination arena for ranking candidate factor recipes.
 - `dashboard_bridge`: a data bridge that turns mock research artifacts into dashboard JSON.
+- `educational_model`: a toy factor scoring model with public, easy-to-edit weights.
 - `dashboard`: a static read-only signal field dashboard backed by mock data.
 - `examples/mock_data`: small fake data used for demos and tests.
 
@@ -66,6 +67,12 @@ Run a small factor arena:
 
 ```powershell
 python -m openclaw_a_share_research_lab.gladiator --factors examples\mock_data\factors.csv --out data\gladiator_rankings.json
+```
+
+Run the educational factor model:
+
+```powershell
+python -m openclaw_a_share_research_lab.educational_model --input examples\mock_data\feature_matrix.csv --out data\educational_model_top5.json
 ```
 
 Build dashboard data:
